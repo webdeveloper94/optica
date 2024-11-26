@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/optica/static/css/main.f8bbfc39.css",
+    "main.js": "/optica/static/js/main.09686f30.js",
+    "static/js/453.19cb4b84.chunk.js": "/optica/static/js/453.19cb4b84.chunk.js",
+    "index.html": "/optica/index.html",
+    "main.f8bbfc39.css.map": "/optica/static/css/main.f8bbfc39.css.map",
+    "main.09686f30.js.map": "/optica/static/js/main.09686f30.js.map",
+    "453.19cb4b84.chunk.js.map": "/optica/static/js/453.19cb4b84.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f8bbfc39.css",
+    "static/js/main.09686f30.js"
+  ]
+}
