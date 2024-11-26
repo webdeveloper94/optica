@@ -7,10 +7,14 @@ import TopicDetail from './components/TopicDetail';
 import Laboratory from './components/Laboratory';
 import Problems from './components/Problems';
 import Tests from './components/Tests';
+import OfflineAlert from './components/OfflineAlert';
 
 const App: React.FC = () => {
+  // Production muhitda /optica, development muhitda / ishlatiladi
+  const basename = process.env.NODE_ENV === 'production' ? '/optica' : '/';
+
   return (
-    <Router>
+    <Router basename={basename}>
       <div className="min-h-screen bg-gray-900">
         <Navbar />
         <Routes>
@@ -21,6 +25,7 @@ const App: React.FC = () => {
           <Route path="/problems" element={<Problems />} />
           <Route path="/tests" element={<Tests />} />
         </Routes>
+        <OfflineAlert />
       </div>
     </Router>
   );
