@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import HomePage from './components/HomePage';
+import Topics from './components/Topics';
+import TopicDetail from './components/TopicDetail';
+import Laboratory from './components/Laboratory';
+import Problems from './components/Problems';
+import Tests from './components/Tests';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="min-h-screen bg-gray-900">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/topics" element={<Topics />} />
+          <Route path="/topics/:topicId" element={<TopicDetail />} />
+          <Route path="/laboratory" element={<Laboratory />} />
+          <Route path="/problems" element={<Problems />} />
+          <Route path="/tests" element={<Tests />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
