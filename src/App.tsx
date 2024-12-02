@@ -7,6 +7,7 @@ import TopicDetail from './components/TopicDetail';
 import Laboratory from './components/Laboratory';
 import Problems from './components/Problems';
 import Tests from './components/Tests';
+import About from './components/About';
 import OfflineAlert from './components/OfflineAlert';
 
 const App: React.FC = () => {
@@ -24,6 +25,7 @@ const App: React.FC = () => {
           <Route path="/laboratory" element={<Laboratory />} />
           <Route path="/problems" element={<Problems />} />
           <Route path="/tests" element={<Tests />} />
+          <Route path="/about" element={<About />} />
         </Routes>
         <OfflineAlert />
       </div>
